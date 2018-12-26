@@ -1,0 +1,91 @@
+﻿<!-- <div class="card" [@routerTransition]>
+    <div #cardBody class="body">
+        <form #registerForm="ngForm" method="post" novalidate (ngSubmit)="save()">
+            <h4 class="text-center">{{l("Register")}}</h4>
+
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input materialInput class="form-control" autoFocus type="text" [(ngModel)]="model.name" name="Name" required maxlength="32" />
+                    <label class="form-label">{{l('Name')}}</label>
+                </div>
+            </div>
+
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input materialInput class="form-control" type="text" [(ngModel)]="model.surname" name="Surname" required maxlength="32" />
+                    <label class="form-label">{{l('Surname')}}</label>
+                </div>
+            </div>
+
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input materialInput class="form-control" type="email" [(ngModel)]="model.emailAddress" name="EmailAddress" required maxlength="255" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$" />
+                    <label class="form-label">{{l('EmailAddress')}}</label>
+                </div>
+            </div>
+
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input materialInput class="form-control" type="text" autocomplete="off" [(ngModel)]="model.userName" name="UserName" required maxlength="32" />
+                    <label class="form-label">{{l('UserName')}}</label>
+                </div>
+            </div>
+
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input materialInput class="form-control" type="password" [(ngModel)]="model.password" name="Password" required maxlength="32" />
+                    <label class="form-label">{{l('Password')}}</label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button [disabled]="saving" [routerLink]="['../login']" type="button" class="btn btn-default">{{l("Back")}}</button>
+                <button type="submit" class="btn btn-success" [disabled]="!registerForm.form.valid">{{l("Submit")}}</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+ -->
+
+ <div class="register-htc">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 fix-right">
+        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 img-register">
+            <!-- <img src="https://di-uploads-pod2.dealerinspire.com/underrinerhyundairedesign/uploads/2015/11/2016-Hyundai-Accent-Banner-1.jpg" alt="" style="width: 100%;height:100vh;"> -->
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-content">
+            <form action="" class="form-register"#registerForm="ngForm" method="post" novalidate (ngSubmit)="save()">
+                <div class="header-form">
+                    <img src="../../assets/images/logo.png" alt="">
+                    <p>CREATE AN ACCOUNT</p>
+                </div>
+                <div class="content-form">
+                    <div class="form-group">
+                        <label for="email-b-f">Enter your Name</label>
+                        <input materialInput class="form-control" autoFocus type="text" [(ngModel)]="model.name" name="Name" required maxlength="32" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email-b-f">Enter your SurName</label>
+                        <input materialInput class="form-control" type="text" [(ngModel)]="model.surname" name="Surname" required maxlength="32" placeholder="Surname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email-b-f">Enter your UserName</label>
+                        <input class="form-control" type="text" autocomplete="off" placeholder="UserName" [(ngModel)]="model.userName" name="UserName" required maxlength="32">
+                    </div>
+                    <div class="form-group">
+                        <label for="email-b-f">Enter your Email</label>
+                        <input materialInput class="form-control" type="email" [(ngModel)]="model.emailAddress" name="EmailAddress" required maxlength="255" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password-b-f">Enter your password</label>
+                        <input placeholder="********" materialInput class="form-control" type="password" [(ngModel)]="model.password" name="Password" required maxlength="32" autocomplete="new-password">
+                    </div>
+                    <div class="form-group">
+                        <button [disabled]="saving" [routerLink]="['../login']" type="button" class="btn btn-danger btn2 w-100p mb-1 mr-1">Back</button>
+                        <button type="submit" class="btn btn-primary btn1 w-100p mb-1 mr-1" [disabled]="!registerForm.form.valid">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

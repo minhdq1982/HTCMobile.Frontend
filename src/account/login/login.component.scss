@@ -1,0 +1,112 @@
+﻿// .social-icons {
+//     padding-left: 0px;
+
+//     li {
+//         display: inline-block;
+//         margin-right: 5px;
+
+//         a {
+//             width: 40px;
+//         }
+//     }
+// }
+.login-htc {
+	
+	.fix-right {
+		background-color: #FFFFFF;
+		// position: fixed;
+		top: 0px;
+		padding-right: 0px;
+		.img-login {
+		background-repeat: no-repeat;
+		width: 100%;
+		height:100vh;
+		background-size: cover;
+		padding-left: 0px;
+		background: url("../../assets/images/bg-login.png") no-repeat center;
+		background-size: cover;
+	}
+	.form-content {
+		padding: 48px;
+		.form-login {
+		 	.header-form {
+		 		img {
+		 			// width: 60%;
+		 		}
+		 		p {
+		 			padding-top: 5px;
+				    font-size: 1.05rem;
+				    font-weight: 400;
+				    line-height: 1.5;
+				    color: rgba(0,0,0,.87);
+				    text-align: left;
+		 		}
+		 	}
+		 	.content-form {
+		 		.form-group {		 			input {
+		 				height: 35px;
+		 				border-radius: none;
+		 				background-color: #fff;
+		 				border: 1px solid #ced4da;
+    					border-radius: .125rem;
+		 			}
+		 			button {
+		 				height: 38px;
+		 				font-size: 13px;
+		 				font-weight: 400;
+    					text-align: center;
+    					// overflow: visible;
+    					border-radius: 0px;
+		 			}
+		 			.btn1 {
+						color: #fff;
+						background-color: #304ffe;
+						border-color: #304ffe;
+						text-align: center;
+		 			}
+		 			.btn2 {
+		 				padding-left:20px;
+		 				padding-right: 20px;
+						cursor: pointer;
+						font-size: 13px;
+    					letter-spacing: .02rem;
+    					font-weight: 400;
+    					color: #304ffe;
+    					background-color: transparent;
+		 			}
+		 			.btn2:hover {
+		 				background-color: #2388db;
+		 			}
+		 		}
+		 	}
+		}
+	}
+    @media only screen and (max-width:960px) {
+        .form-content {
+        	width: 100%;
+        }
+    }
+	@media only screen and (min-width: 768px){
+		.d-md-inline-flex {
+		    display: inline-flex!important;
+		}
+	}
+	@media only screen and (min-width: 992px){
+		.col-lg-8 {
+		    flex: 0 0 66.66666667%;
+		    max-width: 66.66666667%;
+		}
+	}
+	@media only screen and (max-width:600px) {
+        .img-login {
+        	display: none;
+        }
+    }
+    @media only screen and (min-width: 576px){
+	    	.col-sm-12 {
+			    flex: 0 0 100%;
+			    max-width: 100%;
+			}
+    	}
+	}
+}

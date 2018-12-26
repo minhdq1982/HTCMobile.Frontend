@@ -1,0 +1,31 @@
+﻿.content.account-forms {
+    margin-top: 10px;
+}
+
+.content.tenant-change-box {
+    padding: 16px 16px 0px 16px;
+    margin: 120px auto 0px auto;
+    max-width: 400px;
+
+    a {
+        cursor: pointer;
+    }
+}
+.login-box {
+	background: white;
+	// background-image: linear-gradient(to right, red , yellow);
+}
+
+.login-page{
+	.wrapper {
+		padding-bottom: 0px;
+	}
+	.card.tenant-change-component {
+		position: absolute;
+		bottom: 0px;
+		left : 0px;
+		border: none;
+		width: 100%;
+		border-top: 1px solid rgba(0, 0, 0, 0.125);
+	}
+}

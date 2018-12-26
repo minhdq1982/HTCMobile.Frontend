@@ -1,0 +1,11 @@
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\bin\Debug\netcoreapp2.1\Dockerfile
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\bin\Debug\netcoreapp2.1\angular.dll.config
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\bin\Debug\netcoreapp2.1\angular.deps.json
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\bin\Debug\netcoreapp2.1\angular.dll
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\bin\Debug\netcoreapp2.1\angular.pdb
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\obj\Debug\netcoreapp2.1\HTCPortal.AngularUI.csprojAssemblyReference.cache
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\obj\Debug\netcoreapp2.1\HTCPortal.AngularUI.csproj.CoreCompileInputs.cache
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\obj\Debug\netcoreapp2.1\HTCPortal.AngularUI.AssemblyInfoInputs.cache
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\obj\Debug\netcoreapp2.1\HTCPortal.AngularUI.AssemblyInfo.cs
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\obj\Debug\netcoreapp2.1\angular.dll
+D:\TVO\BU-2\Clients\HTC\HTC Portal\SVN\Sourcecode\Web\Frontend\obj\Debug\netcoreapp2.1\angular.pdb

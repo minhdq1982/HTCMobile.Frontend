@@ -1,0 +1,69 @@
+<div class="container-fluid customers-account">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 card block-search">	
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<div class="form-group">
+				<label for="email-b-f">Họ tên</label>
+	            <div class="input-group">
+	                <input type="text" class="form-control" placeholder="Searching for everything..." [(ngModel)]="searchName">
+	            </div>
+	        </div>
+		</div>
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<div class="form-group">
+                <div class="form-group">
+					<label for="email-b-f">CMNN/Hộ chiếu</label>
+		            <div class="input-group">
+		                <input type="text" class="form-control" placeholder="Enter CMNN/Hộ chiếu..." [(ngModel)]="searchCmnd">
+		            </div>
+		        </div>
+            </div>
+		</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<div class="form-group float-right">
+				<label for="email-b-f"></label>
+	            <div class="input-group">
+                    <button type="button" class="btn btn-primary mr-1"><i class="fa fa-search"> Tìm kiếm</i></button>
+	                <button type="button" class="btn btn-primary" (click)="exportAsXLSX()">Export Excel</button>
+	            </div>
+	        </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 10px">
+		<div widget class="card">
+			<div class="card-body pt-0 widget-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover no-border-top">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Họ tên</th>
+                                <th>Điện thoại</th>
+                                <th>Email</th>
+                                <th>CMND/Hộ Chiếu</th>
+                                <th>Ngày sinh</th>
+                                <th>Khóa/Mở tài khoản</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor= "let accounts of customaccount | paginate: { itemsPerPage: 8, currentPage: p } | customerFilter: {name: searchName, cmnd: searchName }; let i=index;">
+                                <td>{{accounts.stt}}</td>
+                                <td routerLink="/app/customers-info"><a>{{accounts.name}}</a></td>
+                                <td>{{accounts.phonenumber}}</td>
+                                <td>{{accounts.email}}</td>
+                                <td>{{accounts.cmnd}}</td>
+                                <td>{{accounts.birthday}}</td>
+                                <td><!-- {{accounts.lock}} -->
+                                    <label class="switch">
+                                      <input type="checkbox" checked>
+                                      <span class="slider round"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+		</div>
+	</div>
+    <pagination-controls (pageChange)="p = $event" autoHide="true"></pagination-controls>
+</div>

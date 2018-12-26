@@ -1,0 +1,22 @@
+<div class="app combined">
+    <div class="wrapper">
+		<div class="overlay"></div>
+
+		<top-bar></top-bar>
+
+		<section (window:resize)="onResize($event)">
+		    <aside id="leftsidebar" class="sidebar">
+		        <!-- <sidebar-user-area></sidebar-user-area> -->
+		        <sidebar-nav></sidebar-nav>
+		        <!-- <sidebar-footer></sidebar-footer> -->
+		    </aside>
+
+		    <right-sidebar></right-sidebar>
+		</section>
+		<section class="content">
+		    <router-outlet></router-outlet>
+		</section>
+
+		<app-back-top position="200"></app-back-top>
+	</div>
+</div>

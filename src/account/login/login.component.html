@@ -1,0 +1,79 @@
+﻿<!-- <div class="card" id="LoginArea" [@routerTransition]>
+    <div #cardBody class="body">
+        <form #loginForm="ngForm" id="LoginForm" method="post" novalidate (ngSubmit)="login()">
+            <h4 class="text-center">{{l("LogIn")}}</h4>
+
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                </span>
+                <div class="form-line">
+                    <input materialInput [(ngModel)]="loginService.authenticateModel.userNameOrEmailAddress" autoFocus class="form-control" type="text" autocomplete="off" placeholder="{{l('UserNameOrEmail')}}" name="userNameOrEmailAddress" required maxlength="255" />
+                </div>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">lock</i>
+                </span>
+                <div class="form-line">
+                    <input materialInput type="password" [(ngModel)]="loginService.authenticateModel.password" class="form-control" name="password" placeholder="{{l('Password')}}" required maxlength="32">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 p-t-5">
+                    <input type="checkbox"  [(ngModel)]="loginService.rememberMe" name="rememberMe" id="rememberme" class="filled-in chk-col-pink" value="true">
+                    <label for="rememberme">{{l("RememberMe")}}</label>
+                </div>
+                <div class="col-xs-4">
+                    <button id="LoginButton" class="btn btn-block bg-pink waves-effect" type="submit">{{l("LogIn")}}</button>
+                </div>
+            </div>
+
+            <div class="row m-t-15 m-b--20" *ngIf="isSelfRegistrationAllowed">
+                <div class="col-xs-12">
+                    <a [routerLink]="['../register']">{{l("Register")}}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> -->
+<div class="login-htc">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 fix-right">
+        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 img-login">
+            <!-- <img src="https://i.imgur.com/8DRUSQj.jpg" alt="" style="width: 100%;height:100vh;"> -->
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-content">
+            <form action="" class="form-login" #loginForm="ngForm" id="LoginForm" method="post" novalidate (ngSubmit)="login()">
+                <div class="header-form">
+                    <img src="../../assets/images/logo.png" alt="">
+                    <p>SIGN IN TO YOUR ACCOUNT</p>
+                </div>
+                <div class="content-form">
+                    <div class="form-group">
+                        <label for="email-b-f">Enter your username</label>
+                        <input id="email-b-f" class="form-control" type="email" placeholder="username" materialInput [(ngModel)]="loginService.authenticateModel.userNameOrEmailAddress" autocomplete="off" name="userNameOrEmailAddress" required maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="password-b-f">Enter your password</label>
+                        <input id="password-b-f" class="form-control" type="password" placeholder="********" materialInput [(ngModel)]="loginService.authenticateModel.password" name="password" required maxlength="32" autocomplete="new-password">
+                        <a _ngcontent-c0="" class="form-text" href="javascript:void(0);"><small _ngcontent-c0="">Recover password</small></a>
+                    </div>
+                    <div class="form-group d-flex justify-content-between">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input checkbox-success" id="login-keep" checked [(ngModel)]="loginService.rememberMe" name="rememberMe">
+                            <label class="custom-control-label" for="login-keep">Stay logged in</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn1 w-100p mb-1 mr-1">Login</button>
+                        <button type="button" class="btn btn-outline-primary btn2 mb-1 mr-1"><a href="" [routerLink]="['../register']">Create an account</a></button>
+                    </div>
+                </div>
+            </form>
+            <div *ngIf="showTenantChange()" class="tenant-change-box">
+                <tenant-change></tenant-change>
+            </div>
+        </div>
+    </div>
+</div>

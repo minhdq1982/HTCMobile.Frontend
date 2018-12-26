@@ -1,0 +1,84 @@
+.register-htc {
+	.fix-right {
+		background-color: #FFFFFF;
+		position: fixed;
+		top: 0px;
+		padding-right: 0px;
+		.img-register {
+		background-repeat: no-repeat;
+		width: 100%;
+		background: url("../../assets/images/bg-login.png") no-repeat center;	
+		background-size: cover;
+		padding-left: 0px;
+		height:100vh;
+	}
+	.form-content {
+		padding: 48px;
+		min-width: 250px;
+		.form-register {
+		 	.header-form {
+		 		img {
+		 			width: 60%;
+		 		}
+		 		p {
+		 			padding-top: 5px;
+				    font-size: 1.05rem;
+				    font-weight: 400;
+				    line-height: 1.5;
+				    color: rgba(0,0,0,.87);
+				    text-align: left;
+		 		}
+		 	}
+		 	.content-form {
+		 		.form-group {
+		 			input {
+		 				height: 35px;
+		 				border-radius: none;
+		 				background-color: #fff;
+		 				border: 1px solid #ced4da;
+    					border-radius: .125rem;
+		 			}
+		 			button {
+		 				height: 38px;
+		 				font-size: 13px;
+		 				font-weight: 400;
+    					text-align: center;
+    					overflow: visible;
+    					border-radius: 0px;
+		 			}
+		 			.btn1 {
+						color: #fff;
+						background-color: #304ffe;
+						border-color: #304ffe;
+		 			}
+		 			.btn2 {
+		 				background-image: linear-gradient(to right, red , yellow);
+		 			}
+		 		}
+		 	}
+		}
+	}
+	@media (min-width: 768px){
+		.d-md-inline-flex {
+		    display: inline-flex!important;
+		}
+	}
+	@media (min-width: 992px){
+		.col-lg-8 {
+		    flex: 0 0 66.66666667%;
+		    max-width: 66.66666667%;
+		}
+	}
+	@media only screen and (max-width:600px) {
+        .img-register {
+        	display: none;
+        }
+    }
+    @media (min-width: 576px){
+	    	.col-sm-12 {
+			    flex: 0 0 100%;
+			    max-width: 100%;
+			}
+    	}
+	}
+}

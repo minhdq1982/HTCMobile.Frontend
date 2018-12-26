@@ -1,0 +1,203 @@
+<div class="container-fluid agency-information">
+	<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 card block-search">	
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<div class="form-group">
+				<label for="email-b-f">Danh Mục</label>
+	            <div class="input-group">
+	                <input type="text" class="form-control" placeholder="Search for...">
+	            </div>
+	        </div>
+		</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			<div class="form-group">
+                <label for="exampleSelect1">Mẫu xe</label>
+                <select class="form-control" id="exampleSelect1">
+                    <option>Tất cả</option>
+                    <option>Grand i10</option>
+                    <option>Accent</option>
+                    <option>Tucson</option>
+                    <option>Elantra</option>
+                    <option>Santa Fe</option>
+                    <option>Country</option>
+                </select>
+            </div>
+		</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			<div class="form-group">
+                <label for="exampleSelect1">Thành phố</label>
+                <select class="form-control" id="exampleSelect1">
+                    <option>Tất cả</option>
+                    <option>Hà Nội</option>
+                    <option>Huế</option>
+                    <option>Đà Nẵng</option>
+                    <option>Sài Gòn</option>
+                    <option>T.P Hồ Chí Minh</option>
+                </select>
+            </div>
+		</div>
+		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+			<div class="form-group float-right">
+				<label for="email-b-f"></label>
+	            <div class="input-group">
+	            	<button type="button" class="btn btn-primary mr-1"><i class="fa fa-search"> Tìm kiếm</i></button>
+	                <button type="button" class="btn btn-primary mr-1">Export Excel</button>
+	                <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#info-modal">Add</button>
+	            </div>
+	        </div>
+		</div>
+	</div>
+	<div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="modal-info-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header state modal-primary">                                   
+                    <h4 class="modal-title" id="modal-info-label"><i class="fa fa-edit"></i>Thêm thông tin đại lý</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="email-h-t">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Tên đại lý</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email-h-t">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Khu vực</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email-h-t">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Thành phố</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email-h-t">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Trạng thái</label>
+                        <div class="col-sm-9">
+                            <label class="switch">
+                              <input type="checkbox" checked>
+                              <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div widget class="card">
+			<div class="card-body pt-0 widget-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover no-border-top">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã đại lý</th>
+                                <th>Tên đại lý</th>
+                                <th>Khu vực</th>
+                                <th>Thành phố</th>
+                                <th>Trạng thái</th>
+                                <th>Action...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let ageinfo of agencyinfo">
+                                <td>{{ ageinfo.stt }}</td>
+                                <td>{{ ageinfo.idagency }}</td>
+                                <td>{{ ageinfo.nameagency }}</td>
+                                <td>{{ ageinfo.areaagency }}</td>
+                                <td>{{ ageinfo.cityagency }}</td>
+                                <td>
+									<label class="switch">
+                                      <input type="checkbox" checked>
+                                      <span class="slider round"></span>
+                                    </label>
+                                </td>
+                                <td><span data-toggle="modal" data-target="#edit-modal" class="badge badge-pill badge-primary mr-1"><i class="fa fa-pencil"></i></span><span class="badge badge-pill badge-primary mr-1"><i class="fa fa-times"></i></span></td>
+                                <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="modal-info-label">
+				                    <div class="modal-dialog" role="document">
+				                        <div class="modal-content">
+				                            <div class="modal-header state modal-info">                                   
+				                                <h4 class="modal-title" id="modal-info-label"><i class="fa fa-edit"></i>Thêm thông tin đại lý</h4>
+				                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				                            </div>
+				                            <div class="modal-body">
+				                                <div class="form-group row">
+							                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Mã đại lý</label>
+							                        <div class="col-sm-9">
+							                            <input type="email" class="form-control" id="email-h-t" [(ngModel)]="idangency">
+							                        </div>
+							                    </div>
+							                    <div class="form-group row">
+							                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Tên đại lý</label>
+							                        <div class="col-sm-9">
+							                            <input type="text" class="form-control" id="email-h-t" [(ngModel)]="nameagency">
+							                        </div>
+							                    </div>
+							                    <div class="form-group row">
+							                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Khu vực</label>
+							                        <div class="col-sm-9">
+							                            <input type="text" class="form-control" id="email-h-t" [(ngModel)]="areaagency">
+							                        </div>
+							                    </div>
+							                    <div class="form-group row">
+							                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Thành phố</label>
+							                        <div class="col-sm-9">
+							                            <input type="text" class="form-control" id="email-h-t" [(ngModel)]="cityagency">
+							                        </div>
+							                    </div>
+							                    <div class="form-group row">
+							                        <label for="email-h-f" class="col-sm-3 form-control-label mt-1">Trạng thái</label>
+							                        <div class="col-sm-9">
+							                            <p style="float: left">
+                                                            <label class="switch">
+                                                              <input type="checkbox" checked>
+                                                              <span class="slider round"></span>
+                                                            </label>                     
+                                                        </p>
+							                        </div>
+							                    </div>
+				                            </div>
+				                            <div class="modal-footer">
+				                                <button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
+				                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:10px">
+		<nav aria-label="Page navigation example">
+	        <ul class="pagination">
+	            <li class="page-item disabled">
+	            <a class="page-link" href="#" tabindex="-1">Previous</a>
+	            </li>
+	            <li class="page-item"><a class="page-link" href="#">1</a></li>
+	            <li class="page-item active">
+	            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+	            </li>
+	            <li class="page-item"><a class="page-link" href="#">3</a></li>
+	            <li class="page-item">
+	            <a class="page-link" href="#">Next</a>
+	            </li>
+	        </ul>
+	    </nav>
+	</div>
+</div>

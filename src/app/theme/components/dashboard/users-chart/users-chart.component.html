@@ -1,0 +1,31 @@
+<div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 card chart-users">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="btn-group mb-3" role="group" aria-label="Basic example" style="float: left;">
+            <button type="button" class="btn btn-secondary">Tuần</button>
+            <button type="button" class="btn btn-secondary active">Tháng</button>
+            <button type="button" class="btn btn-secondary">Năm</button>
+        </div>
+        <div class="clear"></div>
+        <div class="detail-users">
+            <h1>40000</h1>
+            <p>Người sử dụng</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">        
+        <div class="w-100 h-300p">
+            <ngx-charts-bar-vertical
+                [scheme]="colorScheme"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [results]="single"
+                (select)="onSelect($event)">
+            </ngx-charts-bar-vertical>                  
+        </div>
+    </div>
+</div>

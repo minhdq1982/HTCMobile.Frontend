@@ -1,0 +1,65 @@
+<!-- Search Bar -->
+<!-- <div class="search-bar">
+    <div class="search-icon">
+        <i class="material-icons">search</i>
+    </div>
+    <input materialInput type="text" placeholder="START TYPING...">
+    <div class="close-search">
+        <i class="material-icons">close</i>
+    </div>
+</div> --> <!-- #END# Search Bar -->
+
+<!-- <nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+            <a href="javascript:void(0);" class="bars"></a>
+            <a routerLink="/app/home" class="navbar-brand"><i class="fa fa-cubes"></i> CỔNG THÔNG TIN NỘI BỘ</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                <topbar-languageswitch></topbar-languageswitch>
+                <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+ <nav class="navbar box-shadow app-header fixed-top" [class.logo-visible]="showInfoContent">
+    <div class="d-flex flex-column w-100">      
+        <div class="d-flex justify-content-start align-items-center top-navbar">                  
+            
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="logo" routerLink="/" (click)="closeSubMenus()" [hidden] = "forgot">
+                <img src="assets/images/logo.png" style="width: 155px; height: 34px;">
+            </a>
+
+            <app-breadcrumb></app-breadcrumb>
+            <div class="top-rigth-icons ml-auto">
+                <span class="d-none d-sm-inline-block">
+                    <app-fullscreen></app-fullscreen>
+                </span>
+                <span class="d-none d-sm-inline-block">
+                    <app-messages></app-messages>
+                </span>
+                <span class="hidden-xs-down">
+                    <app-user-menu></app-user-menu>
+                </span> 
+                <span class="pl-2 pr-2">
+                    <a (click)="logout()">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </a>                   
+                </span> 
+            </div> 
+
+        </div>
+
+<!--         <div class="horizontal-menu-outer" *ngIf="settings.theme.menu == 'horizontal'">
+                   
+            <app-horizontal-menu *ngIf="showHorizontalMenu"  [menuItems]="menuItems"></app-horizontal-menu>        
+            <app-vertical-menu *ngIf="!showHorizontalMenu"  [menuItems]="menuItems"></app-vertical-menu>
+
+        </div> -->
+    </div>
+</nav>
